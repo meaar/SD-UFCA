@@ -6,7 +6,7 @@ public class CurrencyConverterClient {
 
     public static void main(String[] args) {
         try {
-            currencyConverter = (CurrencyConverter) Naming.lookup("rmi://127.0.0.1:11099/RMICurrencyConverter");
+            currencyConverter = (CurrencyConverter) Naming.lookup("rmi://localhost:11099/RMICurrencyConverter");
             System.out.println(String.format("%.2f",currencyConverter.convertEuroToReal(1)));
             System.out.println(String.format("%.2f",currencyConverter.convertRealToEuro(1)));
             System.out.println(String.format("%.2f",currencyConverter.convertDolarToReal(1)));
